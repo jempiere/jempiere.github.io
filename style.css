@@ -16,6 +16,10 @@ body {
 
 h3, h1 {
  color: white;
+ height: 30px;
+ border: none;
+ outline: none;
+ border-radius: 15px;
 }
 
 * {
