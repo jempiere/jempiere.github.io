@@ -12,7 +12,12 @@
 
 body {
  background-color: black;
- width: 100vw;
+ width: 80%;
+}
+
+img {
+ width: 50vw;
+ height: 50vh;
 }
 
 h3, h1 {
