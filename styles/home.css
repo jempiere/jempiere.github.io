@@ -1,0 +1,20 @@
+body {
+	height: 200vh;
+}
+
+#greeting {
+	background-color: #4169e1;
+	width: 100%;
+	overflow-x: hidden;
+	min-height: 20vh;
+	max-height: 40vh;
+}
+
+#greeting center h4 {
+	padding: none;
+	font-family: cursive;
+}
+
+#greeting center h1 {
+	font-size: xx-large;
+}
