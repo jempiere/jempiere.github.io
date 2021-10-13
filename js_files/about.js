@@ -1,0 +1,1 @@
+//About Us javascript configuration
