@@ -1,3 +1,11 @@
+/* Reset margin and padding on everything by default */
+*{
+  margin:0;
+  padding: 0;
+	box-sizing: border-box;
+}
+
+/* Top bar navigation css */
 #nav {
 	background-color: #294391;
 	overflow: hidden;
@@ -5,13 +13,15 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 5vw;
 }
 #nav a {
 	float: left;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
-	padding: 1.4vw 1.4vw;
+	padding: 1.4vw 1.7vw;
+	height: 5vw;
 	font-size: clamp(5pt, 2vw, 15pt);
 	
 }
@@ -25,52 +35,97 @@
 	color: #fff;
 }
 
+
+
+
+
+
+
+
+/* Carousel Code */
+div#carousel {
+	
+	max-width: min(600px, 50vw);
+	position: relative;
+	margin: auto;
+	margin-top: 5vh;
+	background-color: black;
+}
+
+.invisible {
+	display: none;
+}
+.visible {
+	display: block;
+}
+
+div.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: 0.8} to {opcaity: 1.0}
+}
+
+.fade img{
+	width: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+	border-radius: 3px 0 0 3px;
+  user-select: none;
+}
+.prev {
+	left: -25px;
+}
+.next {
+	right: -25px;
+	border-radius: 0 3px 3px 0;
+}
+.prev:hover, .next:hover {
+  background-color: #0008;
+}
+.caption {
+  color: black;
+  font-size: min(3.25vw, 3.5vh);
+  padding: 10px 12px;
+  position: absolute;
+  bottom: -7vh;
+  width: 100%;
+	overflow-wrap: break-word;
+  text-align: center;
+}
+.nums {
+  color:white;
+	background-color: #0008;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+
+
+/* Formatting for text and navigation head buffer */
 .buffer {
 	position: initial;
 	margin-top: 5vw;
 }
 
-.iblock {
-  display: grid;
-  grid-template-columns: 10vw 1fr 1fr;
-  grid-template-rows: 10vw 1.3fr;
-  gap: 0px 5px;
-  grid-auto-flow: row;
-  justify-content: stretch;
-  align-content: stretch;
-  justify-items: stretch;
-  align-items: stretch;
-  grid-template-areas: 
-    "Image head head"
-    "sub sub sub";
-	
-	background-color: white;
-	border-radius: 5px;
-	padding: 5px;
-}
-.iblock img { 
-	grid-area: Image;
-	min-width: 5vw;
-	min-height: 5vw;
-	max-width: 100px;
-	max-height: 100px;
-	border-radius: 5px;
-	padding: 1px;
-}
-.iblock .head { 
-	grid-area: head; 
-	min-width: max-content;
-	font-size: 13pt;
-	height: 10vw;
-	line-height: 10vw;
-	max-width: max-content;
-}
-.iblock .sub { 
-	grid-area: sub; 
-	min-width: max-content;
-	font-size: 11pt;
-	height: max-content;
-}
 .text {
 	font-family: Arial, Helvetica, sans-serif;
 }

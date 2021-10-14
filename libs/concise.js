@@ -51,3 +51,7 @@ const linkCaptureDevice = (player, video = true, audio = true)=>{
 		player.src = stream;
 	}).catch((e)=>err(e));
 };
+
+function last(array=[]){
+	return array[array.length-1];
+}

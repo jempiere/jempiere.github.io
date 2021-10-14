@@ -13,8 +13,9 @@ body {
 #greeting center h4 {
 	padding: none;
 	font-family: cursive;
+	font-size: 4vh;
 }
 
 #greeting center h1 {
-	font-size: xx-large;
+	font-size: 8vh;
 }
