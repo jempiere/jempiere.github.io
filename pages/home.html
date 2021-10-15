@@ -6,7 +6,7 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width">
 
- <title>Template Site</title>
+ <title>TT | Home</title>
  <link rel="stylesheet" href="/styles/default.css" type="text/css"/>
  <link href="/styles/home.css" rel="stylesheet" type="text/css"/>
  
@@ -14,7 +14,17 @@
 <body>
 
 	<!-- Image Block -->
-	
+	<section z-index=1>
+	<div id="nav">
+		<a class="active" href="/pages/home.html">Home</a>
+		<a href="/pages/about.html">About Us</a>
+		<a href="/pages/beacon.html">Beacon Academy</a>
+		<a href="/pages/programs.html">Programs</a>
+		<a href="/pages/registration.html">Registration</a>
+		<a href="/pages/pricing.html">Pricing</a>
+		<a href="/pages/affiliates.html">Affiliates</a>
+	</div>
+	</section>
 
 	<section id="page" class="buffer">
 		<div id="greeting">
@@ -25,7 +35,7 @@
 
 		</div>
 
-		<div id="carousel" onload="setIndex(1)">
+		<div z-index=2 id="carousel" onload="setIndex(1)">
 
 			<div class="invisible fade">
 				<div class="nums text">1 / 3</div>
@@ -50,21 +60,19 @@
 		</div>
 
 	</section>
-	
-	<section>
-	<div id="nav">
-		<a class="active" href="/pages/home.html">Home</a>
-		<a href="/pages/about.html">About Us</a>
-		<a href="/pages/beacon.html">Beacon Academy</a>
-		<a href="/pages/programs.html">Programs</a>
-		<a href="/pages/registration.html">Registration</a>
-		<a href="/pages/pricing.html">Pricing</a>
-		<a href="/pages/affiliates.html">Affiliates</a>
-	</div>
-	</section>
 
-	<section id="contact">
-	</section>
+	<footer id="contact">
+		<div class="footer">
+			<div class="top">Temecula Tutor LLC</div>
+			<div class="center">27715 Jefferson Ave. Suite 109, Temecula CA 92590</div>
+			<div class="bottom"><a class="telephone" href="tel:9515516022">(951).551.6022</a></div>
+		</div>
+		<center>
+			<div>
+				Copyright © 2021 Temecula Tutor - All Rights Reserved.
+			</div>
+		</center>
+	</footer>
   
  <script src="/libs/concise.js"></script>
  <script src="/libs/slideshow.js"></script>

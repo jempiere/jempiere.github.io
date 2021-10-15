@@ -7,9 +7,10 @@
 
 /* Top bar navigation css */
 #nav {
+	position: fixed;
+	z-index: 2;
 	background-color: #294391;
 	overflow: hidden;
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -35,7 +36,48 @@
 	color: #fff;
 }
 
+/* Footer code */
 
+footer {
+	margin-top: 100vh;
+	background-color: #294391;
+	color: white;
+	height: auto;
+	padding-top: 7vh;
+	padding-bottom: 7vh;
+	width: 100%;
+}
+
+div.footer {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 33vw 33vw 33vw;
+	grid-template-areas: 
+		". a ."
+		"b b b"
+		"c c c";
+		align-items: stretch;
+}
+
+.footer .top {
+	grid-area: a;
+	text-align: center;
+	font-size: 13pt;
+}
+.footer .center {
+	grid-area: b;
+	text-align: center;
+	font-size: 10pt;
+}
+.footer .bottom {
+	grid-area: c;
+	text-align: center;
+	font-size: 10pt;
+}
+
+footer details {
+	bottom: 0px;
+}
 
 
 
@@ -43,8 +85,9 @@
 
 
 /* Carousel Code */
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
 div#carousel {
-	
+	z-index: 1;
 	max-width: min(600px, 50vw);
 	position: relative;
 	margin: auto;
@@ -124,8 +167,18 @@ div.fade {
 .buffer {
 	position: initial;
 	margin-top: 5vw;
+	min-height: calc(100%-60pt);
 }
 
 .text {
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+a.telephone {
+	color: cyan;
+	text-decoration: none;
+}
+
+a.telephone:active {
+	color: darkcyan;
 }
