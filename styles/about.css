@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .container {
 	display: grid;
 	grid-template-columns: 1.5% 23.5% 64% 10%;
@@ -10,10 +14,10 @@
   justify-items: stretch;
   align-items: stretch;
 
-	margin: 0px;
+	margin: auto;
 	border-radius: 5px;
 
-	width: 100%;
+	width: var(--fullwidth);
 	overflow-x: hidden;
 }
 .flip{
@@ -22,8 +26,20 @@
 	justify-items: right;
 }
 
-body {
-	overflow-x: hidden;
+div.banner {
+	padding: 5px;
+}
+div.banner center img {
+	width: 80%;
+	margin: var(--large);
+}
+div.banner center div {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: var(--medium);
+	white-space: pre-line;
+}
+div.banner center div.paragraph {
+	font-size: var(--large);
 }
 
 .container img {
@@ -33,9 +49,14 @@ body {
 	border-radius: 50%;
 	justify-self: center;
 }
+
+.container.flip img {
+	justify-self: end;
+}
+
 .container div {
 	grid-area: p;
-	font-size: 15pt;
+	font-size: var(--large);
 	font-family: Arial, Helvetica, sans-serif;
 	white-space: pre-line;
 	overflow-wrap: break-word;

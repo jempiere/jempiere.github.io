@@ -1,0 +1,83 @@
+#lrgrid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	font-family: var(--ff);
+	padding-top: 2vw;
+}
+
+#lrgrid h5 {
+	font-family: var(--ff);
+	font-size: max(10pt, var(--medium));
+}
+
+.bgrid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: 
+	"a a"
+	"b c";
+	font-family: var(-ff);
+	padding: 2vw;
+	width: 100%;
+}
+
+button {
+	width: 100%;
+	margin-top: 2vh;
+	padding: 2vw;
+	background-color: var(--dblue);
+	color: white;
+	border: none;
+	outline: none;
+	font-size: var(--medium);
+}
+
+button:hover {
+	background-color: var(--ddblue);
+}
+
+#bbutton {
+	font-family: var(-ff);
+	text-decoration: none;
+	appearance: button;
+	width: 75%;
+	margin-top: 2vh;
+	padding: 2vw;
+	color: white;
+	background-color: var(--lblue);
+	border: none;
+	outline: none;
+	font-size: var(--medium);
+}
+#bbutton:hover {
+	background-color: var(--dblue);
+}
+
+.top {
+	grid-area: a;
+}
+
+#greeting {
+	background-color: var(--lblue);
+	width: 100%;
+	overflow-x: hidden;
+	min-height: max-content;
+	color: white;
+	padding-top: min(20px, 2vh);
+	padding-bottom: min(20px, 2vh);
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+
+#greeting center p {
+	font-family: var(--ff);
+	font-size: var(--small);
+}
+
+.hd {
+	display: none;
+}
+
+.padding {
+	padding-top: var(--medium);
+}

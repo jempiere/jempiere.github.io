@@ -3,7 +3,7 @@ body {
 }
 
 #greeting {
-	background-color: #4169e1;
+	background-color: var(--lblue);
 	width: 100%;
 	overflow-x: hidden;
 	min-height: 20vh;
@@ -13,9 +13,9 @@ body {
 #greeting center h4 {
 	padding: none;
 	font-family: cursive;
-	font-size: 4vh;
+	font-size: var(--large);
 }
 
 #greeting center h1 {
-	font-size: 8vh;
+	font-size: var(--xlarge);
 }

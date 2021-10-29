@@ -1,4 +1,31 @@
 /* Reset margin and padding on everything by default */
+
+:root {
+	--fullwidth: 100%;
+	--lblue: #4169e1;
+	--dblue: #2e4ca6;
+	--ddblue: #294391;
+	--white: #fff;
+	--telecol: cyan;
+	--telecola: darkcyan;
+
+	--ff: Helvetica;
+
+	--small: clamp(5pt, 1vw, 10pt);
+	--medium: clamp(5pt, 2vw, 15pt);
+	--large: clamp(5pt, 3vw, 20pt);
+	--xlarge: clamp(5pt, 7vh, 40pt);
+	--xxlarge: clamp(5pt, 5vw, 60pt);
+}
+
+body {
+	height: min-content !important;
+}
+
+.padding {
+	padding-top: var(--xxlarge);
+}
+
 *{
   margin:0;
   padding: 0;
@@ -9,39 +36,40 @@
 #nav {
 	position: fixed;
 	z-index: 2;
-	background-color: #294391;
+	background-color: var(--dblue);
 	overflow: hidden;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 5vw;
+	width: var(--fullwidth);
+	height: var(--xxlarge);
 }
 #nav a {
 	float: left;
-	color: #fff;
+	color: var(--white);
 	text-align: center;
 	text-decoration: none;
 	padding: 1.4vw 1.7vw;
-	height: 5vw;
-	font-size: clamp(5pt, 2vw, 15pt);
+	height: var(--xxlarge);
+	font-size: var(--medium);
 	
 }
 #nav a.active {
-	background-color: #4169e1;
-	color: #fff;
+	background-color: var(--lblue);
+	color: var(--white);
 }
 
 #nav a:hover {
-	background-color: #2e4ca6;
-	color: #fff;
+	background-color: var(--dblue);
+	color: var(--white);
 }
 
 /* Footer code */
 
 footer {
-	margin-top: 100vh;
-	background-color: #294391;
-	color: white;
+	box-sizing: border-box;
+	margin-top: 10vh;
+	background-color: var(--ddblue);
+	color: var(--white);
 	height: auto;
 	padding-top: 7vh;
 	padding-bottom: 7vh;
@@ -62,21 +90,22 @@ div.footer {
 .footer .top {
 	grid-area: a;
 	text-align: center;
-	font-size: 13pt;
+	font-size: var(--large);
 }
 .footer .center {
 	grid-area: b;
 	text-align: center;
-	font-size: 10pt;
+	font-size: var(--medium);
 }
 .footer .bottom {
 	grid-area: c;
 	text-align: center;
-	font-size: 10pt;
+	font-size: var(--medium);
 }
 
-footer details {
+footer center div {
 	bottom: 0px;
+	font-size: var(--medium);
 }
 
 
@@ -91,7 +120,7 @@ div#carousel {
 	max-width: min(600px, 50vw);
 	position: relative;
 	margin: auto;
-	margin-top: 5vh;
+	margin-top: var(--xxlarge);
 	background-color: black;
 }
 
@@ -121,19 +150,19 @@ div.fade {
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 8px;
+  padding: 1.25vw;
   color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--large);
   transition: 0.6s ease;
 	border-radius: 3px 0 0 3px;
   user-select: none;
 }
 .prev {
-	left: -25px;
+	left: -3.9vw;
 }
 .next {
-	right: -25px;
+	right: -4vw;
 	border-radius: 0 3px 3px 0;
 }
 .prev:hover, .next:hover {
@@ -141,7 +170,7 @@ div.fade {
 }
 .caption {
   color: black;
-  font-size: min(3.25vw, 3.5vh);
+  font-size: var(--medium);
   padding: 10px 12px;
   position: absolute;
   bottom: -7vh;
@@ -152,8 +181,8 @@ div.fade {
 .nums {
   color:white;
 	background-color: #0008;
-  font-size: 12px;
-  padding: 8px 12px;
+  font-size: var(--small);
+  padding: 4px 6px;
   position: absolute;
   top: 0;
 }
@@ -166,7 +195,7 @@ div.fade {
 /* Formatting for text and navigation head buffer */
 .buffer {
 	position: initial;
-	margin-top: 5vw;
+	margin-top: var(--xxlarge);
 	min-height: calc(100%-60pt);
 }
 
