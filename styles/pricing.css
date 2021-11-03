@@ -1,0 +1,39 @@
+div.grid {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-areas: "a b c";
+	align-items: stretch;
+	width: 80vw;
+	margin: auto;
+	grid-gap: 4px;
+}
+div.left {
+	grid-area: a;
+}
+div.center {
+	grid-area: b;
+}
+div.right {
+	grid-area: c;
+}
+
+div.grid div{
+	background-color: var(--lblue);
+	color: white;
+	text-align: center;
+	padding: var(--ss);
+	font-size: var(--ml);
+}
+
+div.grid div div.body {
+	font-size: var(--sm);
+	text-align: left;
+	padding: var(-ss);
+}
+
+li {
+	display: list-item;
+	margin-left: var(--ss);
+	list-style-type: square;
+}

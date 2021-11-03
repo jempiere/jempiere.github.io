@@ -7,7 +7,7 @@
 
 #lrgrid h5 {
 	font-family: var(--ff);
-	font-size: max(10pt, var(--medium));
+	font-size: max(10pt, var(--mm));
 }
 
 .bgrid {
@@ -29,7 +29,8 @@ button {
 	color: white;
 	border: none;
 	outline: none;
-	font-size: var(--medium);
+	font-size: var(--mm);
+	transition: 1s;
 }
 
 button:hover {
@@ -47,7 +48,8 @@ button:hover {
 	background-color: var(--lblue);
 	border: none;
 	outline: none;
-	font-size: var(--medium);
+	font-size: var(--mm);
+	transition: 1s;
 }
 #bbutton:hover {
 	background-color: var(--dblue);
@@ -71,7 +73,7 @@ button:hover {
 
 #greeting center p {
 	font-family: var(--ff);
-	font-size: var(--small);
+	font-size: var(--ss);
 }
 
 .hd {
@@ -79,5 +81,5 @@ button:hover {
 }
 
 .padding {
-	padding-top: var(--medium);
+	padding-top: var(--mm);
 }

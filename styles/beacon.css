@@ -7,9 +7,9 @@ div img.image {
 }
 
 div.qbox div.top {
-	font-size: var(--large);
+	font-size: var(--ll);
 }
 
 div.qbox div.response {
-	font-size: var(--medium);
+	font-size: var(--mm);
 }
