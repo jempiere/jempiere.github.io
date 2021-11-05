@@ -4,7 +4,7 @@ div.grid {
 	grid-template-columns: 33% 33% 33%;
 	grid-template-areas: "a b c";
 	align-items: stretch;
-	width: 80vw;
+	width: 88vw;
 	margin: auto;
 	grid-gap: 4px;
 }
@@ -32,8 +32,88 @@ div.grid div div.body {
 	padding: var(-ss);
 }
 
-li {
-	display: list-item;
-	margin-left: var(--ss);
-	list-style-type: square;
+div.body div.gg {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: 
+	"l1 r1"
+	"l2 r2"
+	"l3 r3"
+	"l4 r4"
+	"l5 r5";
+	align-items: top;
+	grid-gap: 4px;
+}
+
+div.gg div.left {
+	text-align: left;
+	font-size: var(--sm);
+	list-style-type: "- ";
+	min-height: 2.5em;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+div.gg div.right {
+	text-align: right;
+	font-size: var(--sm);
+	list-style-type: "";
+	min-height: 2.5em;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+div.gg div.l1 {
+	grid-area: l1;
+}
+div.gg div.l2 {
+	grid-area: l2;
+}
+div.gg div.l3 {
+	grid-area: l3;
+}
+div.gg div.l4 {
+	grid-area: l4;
+}
+div.gg div.l5 {
+	grid-area: l5;
+}
+
+div.gg div.r1 {
+	grid-area: r1;
+}
+div.gg div.r2 {
+	grid-area: r2;
+}
+div.gg div.r3 {
+	grid-area: r3;
+}
+div.gg div.r4 {
+	grid-area: r4;
+}
+div.gg div.r5 {
+	grid-area: r5;
+}
+
+div.grid div.small {
+	font-size: var(--ss);
+}
+
+#greeting {
+	background-color: var(--lblue);
+	width: 100%;
+	overflow-x: hidden;
+	min-height: max-content;
+	color: white;
+	padding-top: min(20px, 2vh);
+	padding-bottom: min(20px, 2vh);
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-bottom: 2vw;
+}
+
+#greeting center p {
+	font-family: var(--ff);
+	font-size: var(--ss);
 }

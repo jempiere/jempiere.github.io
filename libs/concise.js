@@ -55,3 +55,13 @@ const linkCaptureDevice = (player, video = true, audio = true)=>{
 function last(array=[]){
 	return array[array.length-1];
 }
+
+//
+
+class Left extends HTMLDivElement {
+}
+window.customElements.define('left-e', Left);
+
+class Right extends HTMLDivElement {
+}
+window.customElements.define('right-e', Right);
