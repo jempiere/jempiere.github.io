@@ -56,12 +56,9 @@ function last(array=[]){
 	return array[array.length-1];
 }
 
-//
-
-class Left extends HTMLDivElement {
+/*Import HTML from a file and embed it*/
+async function importTemplateHTML(path=''){
+	let fetchResponse = await fetch(path);
+	let htmlString = await fetchResponse.text();
+	return htmlString;
 }
-window.customElements.define('left-e', Left);
-
-class Right extends HTMLDivElement {
-}
-window.customElements.define('right-e', Right);

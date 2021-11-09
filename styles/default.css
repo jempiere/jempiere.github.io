@@ -2,6 +2,7 @@
 
 :root {
 	--fullwidth: 100%;
+	--llblue: #547cf3;
 	--lblue: #4169e1;
 	--dblue: #2e4ca6;
 	--ddblue: #294391;
@@ -26,6 +27,8 @@ body {
 
 .padding {
 	padding-top: var(--xx);
+	background-color: transparent;
+	color: transaprent;
 }
 
 *{
@@ -61,7 +64,12 @@ body {
 }
 
 #nav a:hover {
-	background-color: var(--dblue);
+	background-color: var(--ddblue);
+	color: var(--white);
+}
+
+#nav a.active:hover {
+	background-color: var(--lblue);
 	color: var(--white);
 }
 

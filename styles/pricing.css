@@ -41,7 +41,12 @@ div.body div.gg {
 	"l2 r2"
 	"l3 r3"
 	"l4 r4"
-	"l5 r5";
+	"l5 r5"
+	"l6 r6"
+	"l7 r7"
+	"l8 r8"
+	"l9 r9"
+	"l10 r10";
 	align-items: top;
 	grid-gap: 4px;
 }
@@ -79,6 +84,22 @@ div.gg div.l4 {
 div.gg div.l5 {
 	grid-area: l5;
 }
+div.gg div.l6 {
+	grid-area: l6;
+}
+div.gg div.l7 {
+	grid-area: l7;
+}
+div.gg div.l8 {
+	grid-area: l8;
+}
+div.gg div.l9{
+	grid-area: l9;
+}
+div.gg div.l10 {
+	grid-area: l10;
+}
+
 
 div.gg div.r1 {
 	grid-area: r1;
@@ -94,6 +115,21 @@ div.gg div.r4 {
 }
 div.gg div.r5 {
 	grid-area: r5;
+}
+div.gg div.r6 {
+	grid-area: r6;
+}
+div.gg div.r7 {
+	grid-area: r7;
+}
+div.gg div.r8 {
+	grid-area: r8;
+}
+div.gg div.r9 {
+	grid-area: r9;
+}
+div.gg div.r10 {
+	grid-area: r10;
 }
 
 div.grid div.small {

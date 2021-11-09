@@ -6,8 +6,8 @@ body {
 	background-color: var(--lblue);
 	width: 100%;
 	overflow-x: hidden;
-	min-height: 20vh;
-	max-height: 40vh;
+	height: calc(var(--ll)+var(--xl)+var(--mm));
+	padding-bottom: var(--mm);
 }
 
 #greeting center h4 {
@@ -18,4 +18,8 @@ body {
 
 #greeting center h1 {
 	font-size: var(--xl);
+}
+
+#greeting center h5 {
+	font-size: var(--mm);
 }
