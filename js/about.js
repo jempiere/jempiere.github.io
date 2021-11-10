@@ -1,2 +1,2 @@
 //About Us javascript configuration
-dom.idGet('about').classList += 'active';
+dom.idGet('about').classList += ' active';

@@ -1,5 +1,5 @@
 //programs javascript configuration
-dom.idGet('programs').classList += 'active';
+dom.idGet('programs').classList += ' active';
 
 let toggles = {
 	a: false,

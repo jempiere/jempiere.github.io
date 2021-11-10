@@ -1,2 +1,2 @@
 //Affiliates javascript configuration
-dom.idGet('affiliates').classList += 'active';
+dom.idGet('affiliates').classList += ' active';

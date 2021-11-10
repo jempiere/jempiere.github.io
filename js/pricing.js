@@ -1,2 +1,2 @@
 //Pricing javascript configuration
-dom.idGet('pricing').classList += 'active';
+dom.idGet('pricing').classList += ' active';

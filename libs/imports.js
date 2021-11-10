@@ -10,18 +10,17 @@
 
 function doImports(location='', htmlString=``){
 	document.body.insertAdjacentHTML(location,htmlString);
-	}
-
+}
 doImports('afterbegin',`
 	<section>
 		<div id="nav">
-			<a id="home" href="/pages/home.html">Home</a>
+			<a id="home" class="left" href="/pages/home.html">Home</a>
 			<a id="about" href="/pages/about.html">About Us</a>
 			<a id="beacon" href="/pages/beacon.html">Beacon Academy</a>
-			<a id="programs"href="/pages/programs.html">Programs</a>
+			<a id="programs" href="/pages/programs.html">Programs</a>
 			<a id="scheduling" href="/pages/registration.html">Scheduling</a>
 			<a id="pricing" href="/pages/pricing.html">Pricing</a>
-			<a id="affiliates" href="/pages/affiliates.html">Affiliates</a>
+			<a id="affiliates" class="right" href="/pages/affiliates.html">Affiliates</a>
 		</div>
 	</section>
 `

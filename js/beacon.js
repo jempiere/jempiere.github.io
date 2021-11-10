@@ -1,2 +1,2 @@
 //Beacon javascript configuration
-dom.idGet('beacon').classList += 'active';
+dom.idGet('beacon').classList += ' active';

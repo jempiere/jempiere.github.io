@@ -1,2 +1,2 @@
 //Home javascript configuration
-dom.idGet('home').classList += 'active';
+dom.idGet('home').classList += ' active';

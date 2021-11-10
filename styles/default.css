@@ -10,7 +10,7 @@
 	--telecol: cyan;
 	--telecola: darkcyan;
 
-	--ff: Helvetica;
+	--ff: Arial, Helvetica, sans-serif;
 
 	--ss: clamp(5pt, 1vw, 10pt);
 	--sm: clamp(5pt, 1.5vw, 12pt);
@@ -19,6 +19,8 @@
 	--ll: clamp(5pt, 3vw, 20pt);
 	--xl: clamp(5pt, 3.75vw, 40pt);
 	--xx: clamp(5pt, 4.5vw, 60pt);
+
+	--logo: clamp(50px, 14vw, 250px);
 }
 
 body {
@@ -40,6 +42,7 @@ body {
 /* Top bar navigation css */
 #nav {
 	position: fixed;
+	display: flex;
 	z-index: 2;
 	background-color: var(--dblue);
 	overflow: hidden;
@@ -49,7 +52,7 @@ body {
 	height: var(--xx);
 }
 #nav a {
-	float: left;
+	/*float: left;*/
 	color: var(--white);
 	text-align: center;
 	text-decoration: none;
@@ -58,6 +61,14 @@ body {
 	font-size: var(--mm);
 	
 }
+
+#nav a.left {
+	margin-left: auto;
+}
+#nav a.right {
+	margin-right: auto;
+}
+
 #nav a.active {
 	background-color: var(--lblue);
 	color: var(--white);
@@ -220,4 +231,10 @@ a.telephone {
 
 a.telephone:active {
 	color: darkcyan;
+}
+
+img.logo {
+	border-radius: 50%;
+	height: var(--logo);
+	width: var(--logo);
 }
