@@ -2,10 +2,18 @@
 
 :root {
 	--fullwidth: 100%;
+
+	--lllblue: #85ceff;
 	--llblue: #547cf3;
 	--lblue: #4169e1;
 	--dblue: #2e4ca6;
-	--ddblue: #294391;
+	--ddblue: #26408B; 
+
+	--llgreen: #8DB580;
+	--lgreen: #7A9E7E;
+	--dgreen: #294936;
+	--ddgreen: #132A13;
+
 	--white: #fff;
 	--telecol: cyan;
 	--telecola: darkcyan;
@@ -20,7 +28,7 @@
 	--xl: clamp(5pt, 3.75vw, 40pt);
 	--xx: clamp(5pt, 4.5vw, 60pt);
 
-	--logo: clamp(50px, 14vw, 250px);
+	--logo: max(50px, 12vw);
 }
 
 body {
@@ -50,6 +58,7 @@ body {
 	left: 0;
 	width: var(--fullwidth);
 	height: var(--xx);
+	font-family: var(--ff);
 }
 #nav a {
 	/*float: left;*/
@@ -206,6 +215,7 @@ div.fade {
   padding: 4px 6px;
   position: absolute;
   top: 0;
+	border-radius: 0 0 5px 0;
 }
 
 
