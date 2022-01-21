@@ -1,0 +1,115 @@
+:root {
+	border: none;
+	padding: none;
+	--font: "Menlo", Sans-Serif;
+	--color: white;
+	--hl: #EEFF;
+	--bg: #000015;
+}
+
+::selection {
+	color: var(--bg);
+	background: var(--hl);
+}
+
+* {
+	font-family: var(--font);
+}
+
+body {
+	background: var(--bg);
+	text-align: center;
+}
+
+/*DEFAULTS^^*/
+
+
+
+span, input {
+
+	display: inline-block;
+	box-sizing: content-box;
+	min-width: clamp(300px, 100vw, 66vw);
+	padding: 0.5ch 1ch;
+	color: var(--color);
+	border: 1px solid white;
+	border-radius: 7.5px;
+
+	background: black;
+
+	text-align: left;
+	caret-color: var(--color);
+
+	transition: 0.25s;
+
+	outline: none;
+
+	font-size: 10pt;
+
+	margin-bottom: 20px;
+}
+
+span {
+	text-align: right;
+}
+
+input  {
+	display: block;
+	margin-inline: auto;
+}
+
+span:focus, input:focus {
+	box-shadow: 0 0 10px #FFFD;
+}
+
+span:before, input:before {
+	color: grey;
+}
+
+span:empty, input:empty {
+	caret-color: transparent !important;
+}
+
+/*INPUT^^*/
+
+svg {
+	position: fixed;
+	left: 1vh;
+	top: 1vh;
+	max-width: 10px;
+	max-height: 10px;
+	overflow: hidden;
+}
+
+circle {
+	color: white;
+	line-height: 1px;
+	fill: white;
+}
+
+circle#glow {
+	filter: blur(5px);
+}
+
+[contenteditable]:empty {
+	caret-color: transparent !important;
+}
+
+[contenteditable]:empty:before {
+	color: grey;
+	content: attr(data-pl);
+	display: inline-block;
+	text-align: right;
+}
+
+/*SVG*/
+
+.logo {
+	padding-top: 130px;
+	padding-bottom: 20px;
+	max-width: 125px;
+}
+
+#overlay {
+	display: none;
+}

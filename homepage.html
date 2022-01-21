@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="homepage_rsc/style.css" type="text/css">
+	<title>Homepage</title>
+</head>
+<body>
+
+	<div id="overlay" style="background: #000015; position: absolute; top:0; left:0; width: 100%; height:100%; z-index:2000"></div>
+
+	<img src="homepage_rsc/logo.png" alt="" class="logo"> <!--Add block padding-->
+
+	<svg viewBox="0 0 24 24">
+		<circle id="status" cx="12" cy="12" r="6"></circle>
+		<circle id="glow"   cx="12" cy="12" r="6"></circle>
+	</svg>
+
+<input id="lookup" type="search" placeholder="Type Something..." autocomplete="off" name="q" autofocus>
+
+
+	<span id="calculator" contenteditable="true" data-pl="0"></span>
+
+	<script src="homepage_rsc/script.mjs" type="module"></script>
+</body>
+</html>

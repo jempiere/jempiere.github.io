@@ -1,0 +1,93 @@
+* {
+	padding: 0;
+	font-family: "Menlo", Sans-Serif;
+	text-align: center;
+	overflow-x: hidden;
+}
+
+body {
+		background: #192929;
+}
+
+button#kill {
+	position: absolute;
+	font-size: 10pt;
+	right: 0; top: 0;
+	border: none;
+	outline: 1px solid white;
+	color: white;
+	background: black;
+	opacity: 25%;
+	transition: 0.25s;
+	border-bottom-left-radius: 5px;
+	padding: 0.5ch 1ch;
+	z-index: 1000;
+}
+
+button#kill:hover {
+	opacity: 100%;
+	background: #444;
+}
+
+h1 {
+	color: white;
+	margin: auto;
+	font-size: 3em;
+	z-index: 1000;
+}
+
+h2 {
+	margin: auto;
+	color: grey;
+}
+
+span.banner {
+	display: block;
+	width: 100%;
+	background: black;
+	text-align: center;
+	height: 3em;
+	padding-block: 10px;
+	overflow-y: hidden;
+}
+
+span.grid {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto auto;
+	grid-template-areas:
+	"a b"
+	"aa bb";
+	width: max-content;
+	height: max-content;
+	margin: auto;
+	grid-column-gap: 30px;
+}
+
+span.grid > a {
+	color: white;
+	background: black;
+	padding-inline: 5px;
+	padding-block: 7px;
+	border-radius: 5px 5px 0 0;
+	transition: 0.23s;
+}
+span.grid > a:hover {
+	font-size: 11pt;
+}
+
+span.frame {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+iframe {
+	width: 700px;
+	height: 600px;
+	overflow: hidden;
+}
+span.frame > iframe {
+	transform: scale(0.286);
+	transform-origin: 0 0;
+}
