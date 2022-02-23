@@ -48,7 +48,7 @@ document.getElementById('lookup').addEventListener('keydown', e => {
 })
 
 
-const inputs = [...docment.getElementsByClassName('input');];
+const inputs = [...docment.getElementsByClassName('input')];
 const RCOL = document.getElementById('rcol');
 const color = {r:0,g:0,b:0};
 
