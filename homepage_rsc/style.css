@@ -19,13 +19,14 @@
 body {
 	background: var(--bg);
 	text-align: center;
+	overflow-y: hidden;
 }
 
 /*DEFAULTS^^*/
 
 
 
-span, input {
+span#calculator, input {
 
 	display: inline-block;
 	box-sizing: content-box;
@@ -49,7 +50,7 @@ span, input {
 	margin-bottom: 20px;
 }
 
-span {
+span#calculator {
 	text-align: right;
 }
 
@@ -66,7 +67,7 @@ span:before, input:before {
 	color: grey;
 }
 
-span:empty, input:empty {
+span#calculator:empty, input:empty {
 	caret-color: transparent !important;
 }
 
@@ -115,34 +116,45 @@ circle#glow {
 }
 
 /*COLOR EDITOR*/
-div#colorbox{
-	width: 25ch; background: transparent;
-	padding: 2ch; text-align: center;
+div.colorbox{
+	position: relative;
+	margin-top: 20ch;
+	width: 12ch;
+	height: 30ch;
+	padding: 2ch;
+	padding-top: 1ch;
+	padding-bottom: 5ch;
+	text-align: center;
+
 }
-div#swatch{
+div.swatch{
 	position: absolute;
 	color: transparent;
-	background: transparent;
-	width: 15ch;
-	height: 21ch;
-	top: 6ch;
-	left: 12ch;
+	background: white;
+	width: 3ch;
+	height: 17.5ch;
+	margin-top: 0;
+	left: 10ch;
+	top: 4ch;
 }
 
-div#swatch span.input {
+div.colorbox span.input {
 	display: block;
 	margin-top: 3ch;
-	height: 1ch;
-	padding: 2ch 1ch;
-	background: #333;
+	height: 0.5ch;
+	padding: 1.5ch 1ch;
+	background: var(--bg);
 	color: white;
-	outline: none; border: none;
+	outline: none;
 	white-space: nowrap;
+	line-height: 0.5ch;
+	border: 1px solid white;
+	border-radius: 7.5px;
 }
 
-div#swatch span.number {
+div.colorbox span.number {
 	width: 3ch;
 }
-div#swatch span.text {
+div.colorbox span.text {
 	width: 9ch;
 }
