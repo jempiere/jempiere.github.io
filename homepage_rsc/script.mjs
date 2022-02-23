@@ -83,9 +83,9 @@ function updateColor(element,classList){
 		color['r'] = parseInt(res[0],16) || color['r'];
 		color['g'] = parseInt(res[1],16) || color['g'];
 		color['b'] = parseInt(res[2],16) || color['b'];
-		dom.idGet('r').textContent = color['r'];
-		dom.idGet('g').textContent = color['g'];
-		dom.idGet('b').textContent = color['b'];
+		document.getElementById('r').textContent = color['r'];
+		document.getElementById('g').textContent = color['g'];
+		document.getElementById('b').textContent = color['b'];
 		res = '#'+temp.join('');
 	}
 	RCOL.style.backgroundColor = res;
