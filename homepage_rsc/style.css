@@ -113,3 +113,36 @@ circle#glow {
 #overlay {
 	display: none;
 }
+
+/*COLOR EDITOR*/
+div#colorbox{
+	width: 25ch; background: transparent;
+	padding: 2ch; text-align: center;
+}
+div#swatch{
+	position: absolute;
+	color: transparent;
+	background: transparent;
+	width: 15ch;
+	height: 21ch;
+	top: 6ch;
+	left: 12ch;
+}
+
+div#swatch span.input {
+	display: block;
+	margin-top: 3ch;
+	height: 1ch;
+	padding: 2ch 1ch;
+	background: #333;
+	color: white;
+	outline: none; border: none;
+	white-space: nowrap;
+}
+
+div#swatch span.number {
+	width: 3ch;
+}
+div#swatch span.text {
+	width: 9ch;
+}

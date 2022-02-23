@@ -46,3 +46,95 @@ document.getElementById('lookup').addEventListener('keydown', e => {
 		else window.open('https://duckduckgo.com/?t=ffab&q='+text+'&ia=web','_self');//do normal google stuff
 	}
 })
+
+
+const inputs = [...docment.getElementsByClassName('input');];
+const RCOL = document.getElementById('rcol');
+const color = {r:0,g:0,b:0};
+
+for(let input of inputs){
+	input.addEventListener('keydown',doHandle);
+	input.addEventListener('keyup',doHandle);
+}
+function doHandle(e){
+	if(e.key == 'Enter') e.preventDefault();
+
+	const cl = [...e.target.classList];
+	if(cl.includes('number') && !isValidNumber(e.target.textContent,e.key))
+		e.preventDefault(0);
+	if(cl.includes('text') && !isValidHex(e.target.textContent,e.key))
+		e.preventDefault(0);
+	updateColor(e.target,cl);
+}
+
+function updateColor(element,classList){
+	if(!classList.includes('input')) return;
+
+
+	let res   = 'rgb(0,0,0,255)';
+	const pos = element.id;
+
+	if(classList.includes('number')){
+		color[pos_str] = element.textContent;
+		res = formatRGB(...Object.values(color));
+	}
+	if(classList.includes('text')){
+		const temp = formatHex(element.textContent);
+		color['r'] = parseInt(res[0],16) || color['r'];
+		color['g'] = parseInt(res[1],16) || color['g'];
+		color['b'] = parseInt(res[2],16) || color['b'];
+		dom.idGet('r').textContent = color['r'];
+		dom.idGet('g').textContent = color['g'];
+		dom.idGet('b').textContent = color['b'];
+		res = '#'+temp.join('');
+	}
+	RCOL.style.backgroundColor = res;
+}
+
+function isValidNumber(body, added){
+	if(added == 'Backspace') return true;
+	if(body.length < 3 && ~'0.1.2.3.4.5.6.7.8.9'.indexOf(added))
+		return true;
+}
+
+function isValidHex(body, added){
+	if(added == 'Backspace') return true;
+	if(body.length < 9 && ~'#0123456789abcdef'.indexOf(added.toLowerCase())){
+		return true;
+	}
+}
+
+function formatHex(str){
+	str = str.replaceAll(/\s|[#]+/g,'');
+	if(str.length < 1) return ['00','00','00','ff'];
+	const len = str.length;
+	const bSize = (len>6) ? 4 : 3;				 //the size of the buckets
+	const rSize = (len%bSize)?1:len/bSize; //number of indices per bucket
+
+	const arr = new Array(bSize); //array of buckets size
+	const test = bucketSplit(str,rSize);
+	for(let i in test)
+		if(test[i].length < 2)
+			test[i] = `${test[i]}${test[i]}`;
+
+	if(test.length < 4) test.push('ff');
+
+	return test;
+}
+
+function bucketSplit(str,bSize){
+	const res = [];
+	let   acc = '';
+	let index = 0;
+	while(42){
+		acc += str[index++];
+		if(acc.length == bSize){
+			res.push(acc);
+			acc = '';
+			str = str.slice(bSize);
+			index = 0;
+		}
+		if(index == str.length) break;
+	}
+	return res;
+}
