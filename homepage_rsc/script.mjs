@@ -77,12 +77,13 @@ function updateColor(element,classList){
 	if(classList.includes('number')){
 		color[pos] = element.textContent;
 		res = formatRGB(...Object.values(color));
+		document.getElementById('hex').textContent = formatHex(`#${color.r.toString(16)}${color.g.toString(16)}${color.b.toString(16)}`);
 	}
 	if(classList.includes('text')){
 		const temp = formatHex(element.textContent);
-		color['r'] = parseInt(res[0],16) || color['r'];
-		color['g'] = parseInt(res[1],16) || color['g'];
-		color['b'] = parseInt(res[2],16) || color['b'];
+		color['r'] = parseInt(temp[0],16) || color['r'];
+		color['g'] = parseInt(temp[1],16) || color['g'];
+		color['b'] = parseInt(temp[2],16) || color['b'];
 		document.getElementById('r').textContent = color['r'];
 		document.getElementById('g').textContent = color['g'];
 		document.getElementById('b').textContent = color['b'];
