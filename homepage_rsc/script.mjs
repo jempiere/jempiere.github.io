@@ -58,7 +58,7 @@ for(let input of inputs){
 }
 function doHandle(e){
 	if(e.key == 'Enter') e.preventDefault();
-
+	if(~e.key.toLowerCase().indexOf('arrow')) return;
 	const cl = [...e.target.classList];
 	if(cl.includes('number') && !isValidNumber(e.target.textContent,e.key))
 		e.preventDefault(0);
