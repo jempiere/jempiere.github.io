@@ -75,7 +75,7 @@ function updateColor(element,classList){
 	const pos = element.id;
 
 	if(classList.includes('number')){
-		color[pos_str] = element.textContent;
+		color[pos] = element.textContent;
 		res = formatRGB(...Object.values(color));
 	}
 	if(classList.includes('text')){
