@@ -104,6 +104,10 @@ function isValidHex(body, added){
 	}
 }
 
+function formatRGB(r,g,b){
+	return `rgb(${r},${g},${b})`;
+}
+
 function formatHex(str){
 	str = str.replaceAll(/\s|[#]+/g,'');
 	if(str.length < 1) return ['00','00','00','ff'];
