@@ -4,33 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="homepage_rsc/style.css" type="text/css">
+	<link rel="stylesheet" href="homepage_rsc/style2.css" type="text/css"> 
 	<title>Homepage</title>
 </head>
 <body>
+  <img src="homepage_rsc/logo.png" alt="" class="logo"> <!--Add block padding-->
 
-	<div id="overlay" style="background: #000015; position: absolute; top:0; left:0; width: 100%; height:100%; z-index:2000"></div>
-
-	<img src="homepage_rsc/logo.png" alt="" class="logo"> <!--Add block padding-->
-
-	<svg viewBox="0 0 24 24">
-		<circle id="status" cx="12" cy="12" r="6"></circle>
-		<circle id="glow"   cx="12" cy="12" r="6"></circle>
-	</svg>
-
-<input id="lookup" type="search" placeholder="Type Something..." autocomplete="off" name="q" autofocus>
+  <div id="bars">
+  <input id="lookup" type="search" placeholder="..." autocomplete="off" autofocus>
+  <input id="calculator" placeholder="0">
+  </div>
 
 
-	<span id="calculator" contenteditable="true" data-pl="0"></span>
+  <div id="colorbox">
+    <input class="in" id="r" min="0" max="255" value="69" step="1" type="range">
+    <input class="in" id="g" min="0" max="255" value="69" step="1" type="range">
+    <input class="in" id="b" min="0" max="255" value="69" step="1" type="range">
+  	<span class="swatch" id="hex">#000000</span>
+    
+  	<!-- <span class="out" id="rdec"></span> -->
+  	<!-- <span class="out" id="gdec"></span> -->
+  	<!-- <span class="out" id="bdec"></span> -->
+  </div>
 
-<div class="colorbox">
-	<div class="swatch" id="rcol">_</div>
-	<span class="input number" id="r" contenteditable="true" data-pl="0"></span>
-	<span class="input number" id="g" contenteditable="true" data-pl="0"></span>
-	<span class="input number" id="b" contenteditable="true" data-pl="0"></span>
-	<span class="input text" id="hex" contenteditable="true" data-pl="#000"></span>
-</div>
-
-	<script src="homepage_rsc/script.mjs" type="module"></script>
+	<script src="homepage_rsc/script2.mjs" type="module"></script>
 </body>
 </html>

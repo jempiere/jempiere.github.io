@@ -7,7 +7,6 @@ const online  = () => {
 
 	status.style.color = status.style.fill = bool ? '#34E1B0' : '#FC5063';
 	haze.style.color = haze.style.fill = bool ? '#34E1B0' : '#FC5063';
-
 }
 
 const setEnd  = (element) => {
