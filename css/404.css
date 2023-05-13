@@ -1,0 +1,24 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: monospace;
+}
+
+a {
+  font-family: monospace;
+  display: block;
+  color: white;
+  width: 5rem;
+  background: #821;
+  margin: auto;
+  padding: 1rem;
+  transition: 0.1s;
+  border-radius: 15px;
+}
+
+a:hover {
+  background: #281;
+  width: 5.4rem;
+  padding: 1.4rem;
+}
