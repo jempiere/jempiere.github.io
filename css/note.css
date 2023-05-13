@@ -3,12 +3,12 @@
 }
 
 body {
-  font-family: fira-code;
+  font-family: "Fira Code", Sans-Serif;
   overflow: scroll;
   font-size: 14pt;
 }
 
-#overlay {
+span {
   font-size: inherit;
   position: fixed;
   display: block;
@@ -18,7 +18,7 @@ body {
   margin-left: 100ch;  
 }
 
-#editor {
+textarea {
   white-space: pre;
   overflow-wrap: normal;
   overflow-x: scroll;

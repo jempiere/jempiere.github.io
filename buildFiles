@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function tmp(){
+
+  for file in md/*
+  do
+    if [ -f "$file" ]; then
+      local base=$(basename "$file" ".md");
+      echo $base
+      pandoc -c "css/$base".css -s -f markdown -t html --standalone -o "$base".html "md/$base".md;
+    fi
+  done
+
+}
+
+tmp

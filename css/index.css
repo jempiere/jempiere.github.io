@@ -1,0 +1,55 @@
+body {
+  background: black;
+  font-family: "Fira Code", Sans-Serif;
+}
+
+#heading-test {
+  color: #9A9999;
+  font-size: 17pt;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#links {
+  text-align: center;
+}
+
+#links > a {
+  text-decoration: none;
+  display: block;
+  background: #821;
+  color: white;
+  margin-inline: auto;
+  margin-block: 1rem;
+  padding: 1rem;
+  width: 5rem;
+  transition: 0.2s;
+  border-radius: 15px;
+  height: 1rem;
+}
+
+#links > a > span {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 0pt;
+  color: transparent;
+  transition: font-size 0s 0.2s;
+  transition: color 0.2s;
+}
+
+#links > a:hover {
+  background: #218;
+  transform: translateY(-0.5rem);
+  width: 8rem;
+  height: min-content;
+}
+
+#links > a:hover > span {
+  width: 7rem;
+  color: white;
+  font-size: 10pt;
+}
