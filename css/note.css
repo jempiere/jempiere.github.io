@@ -15,10 +15,10 @@ span {
   background: #FFF5;
   color: #0000;
   height: 100vh;
-  margin-left: 100ch;  
+  margin-left: 100ch;
 }
 
-textarea {
+#editor {
   white-space: pre;
   overflow-wrap: normal;
   overflow-x: scroll;
@@ -31,4 +31,10 @@ textarea {
   border: none;
   outline: none;
   resize: vertical;
+}
+
+img {
+  resize: both;
+  max-width: min(100%,100vw);
+  max-height: min(100%,100vh);
 }

@@ -1,5 +1,5 @@
 <span id="overlay">_</span>
-<textarea id="editor" placeholder="..."></textarea>
+<div id="editor" contenteditable="true" placeholder="..."></div>
 
 <script>
   function insertAtCaret(element, text) {
@@ -20,7 +20,7 @@
   let item = document.getElementById("editor");
   try{
     v = localStorage.getItem("editor_text");
-    item.value = v;
+    item.innerHTML = v;
   } catch (err) {
     localStorage.setItem("editor_text","");
   }
@@ -32,6 +32,6 @@
     }
   })
   item.addEventListener("keyup",(e)=>{
-    localStorage.setItem("editor_text",item.value);
+    localStorage.setItem("editor_text",item.innerHTML);
   });
 </script>

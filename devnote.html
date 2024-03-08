@@ -48,7 +48,7 @@
   let item = document.getElementById("editor");
   try{
     v = localStorage.getItem("editor_text");
-    item.value = v;
+    item.innerHTML = v;
   } catch (err) {
     localStorage.setItem("editor_text","");
   }
@@ -60,7 +60,7 @@
     }
   })
   item.addEventListener("keyup",(e)=>{
-    localStorage.setItem("editor_text",item.value);
+    localStorage.setItem("editor_text",item.innerHTML);
   });
 </script>
 </body>
